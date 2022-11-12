@@ -1,15 +1,18 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Search from '../assets/svg/search'
+import { ConnectButton } from "web3uikit"
+
+
 const styles = {
     header: `bg-[#17171A] text-white h-20 flex gap-[100px] w-full p-[30px]`,
     headerWrapper: `flex justify-center h-full max-w-screen-xl mx-auto px-4`,
     nav: `flex justify-center items-center gap-[20px] `,
     navItem: `relative mr-2 cursor-pointer hover:opacity-60`,
-    navLinks: ``,
+    navLinks: `text-white flex max-[100px]`,
     badge: `rounded-full bg-blue-600 h-1 w-1 bottom-5 absolute right-0 top-1 ring-4`,
     inputContainer: `flex inputContainer p-2 rounded bg-[#17124]`,
-    input: `bg-transparent outline-none text-white w-70  ml-3`
+    input: `bg-transparent outline-none text-white w-20  ml-3`
 }
 
 const Header: FC = () => {
@@ -77,7 +80,7 @@ const Header: FC = () => {
                 </nav>
 
                 <div className="flex items-center">
-                    {/* <ConnectButton /> */}
+                    <ConnectButton />
                     <div className={styles.inputContainer}>
                         <Search />
                         <input className={styles.input} placeholder="Search"></input>
