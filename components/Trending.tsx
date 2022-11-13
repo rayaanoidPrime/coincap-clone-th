@@ -26,19 +26,19 @@ const trendingData = [
     },
     {
         number: 1,
-        symbol: "BTC",
-        name: "Bitcoin",
-        icon: btc,
-        isIncrement: true,
-        rate: "2.4%"
-    },
-    {
-        number: 3,
         symbol: "USDT",
         name: "Tether",
         icon: usdt,
         isIncrement: false,
         rate: "9.2%"
+    },
+    {
+        number: 3,
+        symbol: "BTC",
+        name: "Bitcoin",
+        icon: btc,
+        isIncrement: true,
+        rate: "2.4%"
     },
 ]
 
