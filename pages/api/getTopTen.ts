@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
+import { resolve } from "path";
 
 export default function handler(req : NextApiRequest ,res : NextApiResponse){
    const getData =async () => {
@@ -8,13 +9,11 @@ export default function handler(req : NextApiRequest ,res : NextApiResponse){
             headers : {
                 Accept : '*/*'
             },   
-        },
-
-        )
+        })
 
         const data = await response.json();
         res.status(200).json({data});
-
+        return res.end(JSON.stringify(data))
    }
    
    getData();

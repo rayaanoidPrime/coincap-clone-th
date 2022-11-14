@@ -12,7 +12,7 @@ const styles = {
     navLinks: `text-white flex max-[100px]`,
     badge: `rounded-full bg-blue-600 h-1 w-1 bottom-5 absolute right-0 top-1 ring-4`,
     inputContainer: `flex inputContainer p-2 rounded bg-[#17124]`,
-    input: `bg-transparent outline-none text-white w-20  ml-3`
+    input: `bg-transparent outline-none text-white w-70  ml-3`
 }
 
 const Header: FC = () => {

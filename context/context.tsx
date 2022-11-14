@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from "react";
 
 interface CoinMarketCtx {
     //??????????????????????????
+    getTopTenCoins: () => Promise<void>
 }
 export const CoinMarketContext = createContext<CoinMarketCtx | null>(null);
 
@@ -12,7 +13,7 @@ export const CoinMarketProvider = ({ children }: any /*??????????????????????*/)
         try {
             const res = await fetch('/api/getTopTen');
             const data = await res.json();
-            data.data.data;
+            return data.data.data;
         } catch (error) {
             console.log(error);
         }
@@ -20,7 +21,7 @@ export const CoinMarketProvider = ({ children }: any /*??????????????????????*/)
 
     return (
         <CoinMarketContext.Provider value={
-            getTopTenCoins
+            { getTopTenCoins }
         }>
             {children}
         </CoinMarketContext.Provider>
